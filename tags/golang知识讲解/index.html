@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>golang知识讲解 | CodingZhan的个人博客</title>
+    <meta property="og:title" content="golang知识讲解 - CodingZhan的个人博客">
+    <meta property="og:type" content="article">
+        
+        
+    <meta name="Keywords" content="golang,go语言,go语言笔记,ClickHouse">
+    <meta name="description" content="golang知识讲解">
+        
+    <meta name="author" content="CodingZhan">
+    <meta property="og:url" content="http://www.ysqg.com/tags/golang%E7%9F%A5%E8%AF%86%E8%AE%B2%E8%A7%A3/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <link rel="alternate" type="application/rss+xml+xml" href="http://www.ysqg.com/tags/golang%E7%9F%A5%E8%AF%86%E8%AE%B2%E8%A7%A3/index.xml" title="CodingZhan的个人博客" />
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+
+
+    
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="http://www.ysqg.com">
+                        CodingZhan的个人博客
+                    </a>
+                
+                <p class="description">专注于Go语言(golang)、ClickHouse学习分享</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="" href="http://www.ysqg.com">首页</a>
+                    
+                    <a  href="http://www.ysqg.com/archives/" title="归档">归档</a>
+                    
+                    <a  href="http://www.ysqg.com/tags/" title="标签">标签</a>
+                    
+                    <a  href="http://www.ysqg.com/about/" title="关于我">关于我</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    
+    <h3 class="archive-title">
+        包含标签
+        <span class="keyword">golang知识讲解</span>
+        的文章
+    </h3>
+    
+
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="http://www.ysqg.com/2020/05/go-workspace.html">[golang知识讲解]go工作区和GOPATH</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月7日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='http://www.ysqg.com/categories/Golang'>Golang</a>
+            
+        </div>
+        
+        <div class="post-content">
+            首先到go官网下载对应的安装包, 然后配置3 个环境变量:
+ GOROOT：Go 语言安装根目录的路径，也就是 GO 语言的安装路径 GOPATH：若干工作区目录的路径。是我们自己定义的工作空间 GOBIN：GO 程序生成的可执行文件（executable file）的路径  go源码安装后如果产生了归档文件（以“.a”为扩展名的文件），就会放进该工作区的 pkg 子目录；如果产生了可执行文件，就可能会放进该工作区的 bin 子目录
+某个工作区的 src 子目录下的源码文件在安装后一般会被放置到当前工作区的 pkg 子目录下对应的目录中，或者被直接放置到该工作区的 bin 子目录中
+go build构建命令:
+ 如果构建的是库源码文件, 结果文件只会存在于临时目录中 如果构建的是命令源码文件, 结果文件会放在源码文件所在的目录中  go install安装命令:
+ 如果安装的是库源码文件, 结果文件会放在工作区的 pkg 目录下的某个子目录中 如果安装的是命令源码文件, 结果文件会放在工作区的 bin 目录中  ……
+            <p class="readmore"><a href="http://www.ysqg.com/2020/05/go-workspace.html">阅读全文</a></p>
+        </div>
+    </article>
+    
+
+    
+
+
+
+
+
+</div>
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='http://www.ysqg.com/search/' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="http://www.ysqg.com">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="http://www.ysqg.com/2020/06/optimize-vue-project.html" title="Vue项目性能优化实践指南">Vue项目性能优化实践指南</a>
+    </li>
+    
+    <li>
+        <a href="http://www.ysqg.com/2020/05/order-file-and-library-file.html" title="[golang知识讲解]go命令源码文件和库源码文件">[golang知识讲解]go命令源码文件和库源码文件</a>
+    </li>
+    
+    <li>
+        <a href="http://www.ysqg.com/2020/05/go-workspace.html" title="[golang知识讲解]go工作区和GOPATH">[golang知识讲解]go工作区和GOPATH</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    
+    <li><a href="http://www.ysqg.com/categories/Golang/">Golang (2)</a></li>
+    
+    <li><a href="http://www.ysqg.com/categories/vue/">vue (1)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="http://www.ysqg.com/tags/go/">go</a>
+    
+    <a href="http://www.ysqg.com/tags/golang%E7%9F%A5%E8%AF%86%E8%AE%B2%E8%A7%A3/">golang知识讲解</a>
+    
+    <a href="http://www.ysqg.com/tags/gopath/">gopath</a>
+    
+    <a href="http://www.ysqg.com/tags/go%E5%B7%A5%E4%BD%9C%E5%8C%BA/">go工作区</a>
+    
+    <a href="http://www.ysqg.com/tags/vue/">vue</a>
+    
+    <a href="http://www.ysqg.com/tags/vue%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">vue性能优化</a>
+    
+    <a href="http://www.ysqg.com/tags/%E5%91%BD%E4%BB%A4%E6%BA%90%E7%A0%81%E6%96%87%E4%BB%B6/">命令源码文件</a>
+    
+    <a href="http://www.ysqg.com/tags/%E5%BA%93%E6%BA%90%E7%A0%81%E6%96%87%E4%BB%B6/">库源码文件</a>
+    
+</div>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="http://www.ysqg.com/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+    <div class="container">
+        &copy; 2020 <a href="http://www.ysqg.com">CodingZhan的个人博客 By CodingZhan</a>.
+        
+    </div>
+</footer>
+
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+
+
+    <script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+
+
+
+
+
+</body>
+
+</html>

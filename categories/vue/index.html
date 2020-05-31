@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>vue | CodingZhan的个人博客</title>
+    <meta property="og:title" content="vue - CodingZhan的个人博客">
+    <meta property="og:type" content="article">
+        
+        
+    <meta name="Keywords" content="golang,go语言,go语言笔记,ClickHouse">
+    <meta name="description" content="vue">
+        
+    <meta name="author" content="CodingZhan">
+    <meta property="og:url" content="http://www.ysqg.com/categories/vue/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <link rel="alternate" type="application/rss+xml+xml" href="http://www.ysqg.com/categories/vue/index.xml" title="CodingZhan的个人博客" />
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+
+
+    
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="http://www.ysqg.com">
+                        CodingZhan的个人博客
+                    </a>
+                
+                <p class="description">专注于Go语言(golang)、ClickHouse学习分享</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="" href="http://www.ysqg.com">首页</a>
+                    
+                    <a  href="http://www.ysqg.com/archives/" title="归档">归档</a>
+                    
+                    <a  href="http://www.ysqg.com/tags/" title="标签">标签</a>
+                    
+                    <a  href="http://www.ysqg.com/about/" title="关于我">关于我</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    
+    <h3 class="archive-title">
+        分类
+        <span class="keyword">vue</span>
+        中的文章
+    </h3>
+    
+
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="http://www.ysqg.com/2020/06/optimize-vue-project.html">Vue项目性能优化实践指南</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年6月1日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='http://www.ysqg.com/categories/vue'>vue</a>
+            
+        </div>
+        
+        <div class="post-content">
+            Vue 框架通过数据双向绑定和虚拟 DOM 技术，帮我们处理了前端开发中最脏最累的 DOM 操作部分， 我们不再需要去考虑如何操作 DOM 以及如何最高效地操作 DOM；但 Vue 项目中仍然存在项目首屏优化、Webpack 编译配置优化等问题，所以我们仍然需要去关注 Vue 项目性能方面的优化，使项目具有更高效的性能、更好的用户体验。本文是作者通过实际项目的优化实践进行总结而来，希望读者读完本文，有一定的启发思考，从而对自己的项目进行优化起到帮助。本文内容分为以下三部分组成： Vue 代码层面的优化； webpack 配置层面的优化； 基础的 Web 技术层面的优化。
+1. 代码层面的优化 1.1、v-if 和 v-show 区分使用场景
+v-if 是 真正 的条件渲染，因为它会确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建；也是惰性的：如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。 v-show 就简单得多， 不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 的 display 属性进行切换。 所以，v-if 适用于在运行时很少改变条件，不需要频繁切换条件的场景；v-show 则适用于需要非常频繁切换条件的场景。
+1.2、computed 和 watch 区分使用场景 computed： 是计算属性，依赖其它属性值，并且 computed 的值有缓存，只有它依赖的属性值发生改变，下一次获取 computed 的值时才会重新计算 computed 的值； watch： 更多的是「观察」的作用，类似于某些数据的监听回调 ，每当监听的数据变化时都会执行回调进行后续操作； 运用场景： 当我们需要进行数值计算，并且依赖于其它数据时，应该使用 computed，因为可以利用 computed 的缓存特性，避免每次获取值时，都要重新计算； 当我们需要在数据变化时执行异步或开销较大的操作时，应该使用 watch，使用 watch 选项允许我们执行异步操作 ( 访问一个 API )，限制我们执行该操作的频率，并在我们得到最终结果前，设置中间状态。这些都是计算属性无法做到的。……
+            <p class="readmore"><a href="http://www.ysqg.com/2020/06/optimize-vue-project.html">阅读全文</a></p>
+        </div>
+    </article>
+    
+
+    
+
+
+
+
+
+</div>
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='http://www.ysqg.com/search/' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="http://www.ysqg.com">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="http://www.ysqg.com/2020/06/optimize-vue-project.html" title="Vue项目性能优化实践指南">Vue项目性能优化实践指南</a>
+    </li>
+    
+    <li>
+        <a href="http://www.ysqg.com/2020/05/order-file-and-library-file.html" title="[golang知识讲解]go命令源码文件和库源码文件">[golang知识讲解]go命令源码文件和库源码文件</a>
+    </li>
+    
+    <li>
+        <a href="http://www.ysqg.com/2020/05/go-workspace.html" title="[golang知识讲解]go工作区和GOPATH">[golang知识讲解]go工作区和GOPATH</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    
+    <li><a href="http://www.ysqg.com/categories/Golang/">Golang (2)</a></li>
+    
+    <li><a href="http://www.ysqg.com/categories/vue/">vue (1)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="http://www.ysqg.com/tags/go/">go</a>
+    
+    <a href="http://www.ysqg.com/tags/golang%E7%9F%A5%E8%AF%86%E8%AE%B2%E8%A7%A3/">golang知识讲解</a>
+    
+    <a href="http://www.ysqg.com/tags/gopath/">gopath</a>
+    
+    <a href="http://www.ysqg.com/tags/go%E5%B7%A5%E4%BD%9C%E5%8C%BA/">go工作区</a>
+    
+    <a href="http://www.ysqg.com/tags/vue/">vue</a>
+    
+    <a href="http://www.ysqg.com/tags/vue%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">vue性能优化</a>
+    
+    <a href="http://www.ysqg.com/tags/%E5%91%BD%E4%BB%A4%E6%BA%90%E7%A0%81%E6%96%87%E4%BB%B6/">命令源码文件</a>
+    
+    <a href="http://www.ysqg.com/tags/%E5%BA%93%E6%BA%90%E7%A0%81%E6%96%87%E4%BB%B6/">库源码文件</a>
+    
+</div>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="http://www.ysqg.com/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+    <div class="container">
+        &copy; 2020 <a href="http://www.ysqg.com">CodingZhan的个人博客 By CodingZhan</a>.
+        
+    </div>
+</footer>
+
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+
+
+    <script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+
+
+
+
+
+</body>
+
+</html>
